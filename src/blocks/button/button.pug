@@ -1,0 +1,8 @@
+link(href="./button.scss")
+mixin btn(options)
+    -
+        let defaultClass = "button"
+        defaultClass+= options.color === "gray" ? " button_color_gray" : ""
+        defaultClass+= options.color === "transparent" ? " button_color_transparent" : ""
+        defaultClass+= options.size === "medium" ? " button_size_m" : ""
+    a(class = defaultClass, href="#")= options.text

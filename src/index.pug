@@ -3,6 +3,11 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title Limpon
     body
-        h1 Hello world
+        include ./blocks/button/button.pug
+        +btn({text : "get started now"})
+        +btn({color : "gray", text : "learn more"})
+        +btn({size : "medium", text : "free trail"})
+        +btn({color : "transparent", text : "choose plan"})
+        

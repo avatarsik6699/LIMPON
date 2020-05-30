@@ -1,0 +1,28 @@
+@import '~normalize.css';
+@import '~@/fonts/fonts.scss';
+@import './blocks/button/button_size_m/button_size_m.scss';
+@import './blocks/button/button_color_gray/button_color_gray.scss';
+@import './blocks/button/button_color_transparent/button_color_transparent.scss';
+
+:root {
+    box-sizing: border-box;
+}
+
+.button {
+    background: #1085e4;
+    font-family: 'OpenSans', 'sans-serif', 'verdana';
+    color: #fff;
+    border-radius: 3em;
+    font-size: 0.5rem;
+    width: 167px;
+    border: 0;
+    line-height: 5.3;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2.3px;
+    cursor: pointer;
+    outline: none;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
