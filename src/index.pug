@@ -6,8 +6,20 @@ html(lang="en")
         title Limpon
     body
         include ./blocks/button/button.pug
-        +btn({text : "get started now"})
-        +btn({color : "gray", text : "learn more"})
-        +btn({size : "medium", text : "free trail"})
-        +btn({color : "transparent", text : "choose plan"})
+        .container     
+            header(class="header")
+                .header__logo Limpon
+                nav(class="header__nav")
+                    - let elementsOfNav = ['home', 'features', 'video', 'screens', 'pricing', 'team']
+                    each val in elementsOfNav
+                        a(href="#")=val
+                .header__link
+                    +btn({text: "free trail", size: "medium"})
+
+            .content
+                h2(class="content__title") Best software landingpage
+                .content__links
+                    +btn({text: "get started now"})
+                    +btn({text: "learn more", color: "gray"})    
+
         
