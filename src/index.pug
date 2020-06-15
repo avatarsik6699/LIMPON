@@ -6,10 +6,11 @@ html(lang="en")
         title Limpon
     body
         include ./blocks/button/button.pug
-        .container     
+        include ./blocks/feature-card/feature-card.pug
+        .header-container     
             header(class="header")
                 .header__logo Limpon
-                nav(class="header__nav")
+                nav(class="nav")
                     - let elementsOfNav = ['home', 'features', 'video', 'screens', 'pricing', 'team']
                     each val in elementsOfNav
                         a(href="#")=val
@@ -17,9 +18,59 @@ html(lang="en")
                     +btn({text: "free trail", size: "medium"})
 
             .content
-                h2(class="content__title") Best software landingpage
-                .content__links
+                h2(class="content__title") Best Software Landingpage
+                .content__btn
                     +btn({text: "get started now"})
                     +btn({text: "learn more", color: "gray"})    
-
-        
+                .content__img
+        .partners
+            - let images = ['list_img_first.png','list_img_second.png', 'list_img_third.png', 'list_img_fourth.png']
+            ul.partners__list
+                each img in images
+                    li.partners__item
+                        img.partners__logo(src=require("./img/" + img).default)
+        .features-container
+            .features
+                .features__heading
+                    span.features__subtitle features
+                    p.features__title Best Features Ever Seen
+                .features__documented    
+                    +feature-card({
+                        title: "Well Documented", 
+                        description: 'Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed don eiusmod tempor incididunt.',
+                        imgName: 'message.png' })
+                .features__customize   
+                    +feature-card({
+                        title: "Highly Customizeable", 
+                        description: 'Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed don eiusmod tempor incididunt.',
+                        imgName: 'customize.png' })
+                .features__mobile    
+                    +feature-card({
+                        title: "Mobile Friednly Design", 
+                        description: 'Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed don eiusmod tempor incididunt.',
+                        imgName: 'phone.png' })
+                .features__responsive    
+                    +feature-card({
+                        title: "Responsive Design", 
+                        description: 'Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed don eiusmod tempor incididunt.',
+                        imgName: 'responsive.png' })
+                .features__support    
+                    +feature-card({
+                        title: "24/7 Online Support", 
+                        description: 'Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed don eiusmod tempor incididunt.',
+                        imgName: 'support.png' })
+                .features__edit    
+                    +feature-card({
+                        title: "Easy To Edit", 
+                        description: 'Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed don eiusmod tempor incididunt.',
+                        imgName: 'edit.png' })             
+                .features__comment
+                    |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+                    |labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    |laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                    |reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    p(class='features__autor') Rosalina Pong#[span(class="features__rank") - Founder, uithemes] 
+        .content-subscription
+            .content-subscription__form
+                include blocks/form-subscription/form-subscription.pug       
+            img.content-subscription__robot(src=require("./img/robot.png").default)

@@ -1,0 +1,43 @@
+@import '~normalize.css';
+@import '~@/fonts/fonts.scss';
+
+.feature-card {
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; 
+    font-family: 'OpenSans', 'Arial', 'sans-serif';
+    font-weight: 600;
+    box-shadow: 0 13px 16px rgba(180, 181, 181, 0.14);
+    border-radius: 1em;
+    max-width: 371px;
+    padding-bottom: 69px;
+    padding-top: 45px;
+}
+
+.feature-card__title {
+    font-size: 1.3rem;
+    letter-spacing: -0.3px;
+    margin-top: 1.9em;
+    margin-bottom: 0.3em;
+   
+}
+
+.feature-card__description {
+    width: 282px;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    margin-bottom: 1.3em;
+}
+
+.feature-card__link {
+    width: 282px;
+    text-decoration: none;
+    color: #1085e4;
+    letter-spacing: -0.3px;
+}
+
+.feature-card__logo {
+    margin: 0 auto;
+}

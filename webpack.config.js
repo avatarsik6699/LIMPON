@@ -21,7 +21,7 @@ module.exports = {
     devServer: {
         contentBase: './dist',
         hot: true,
-        port: 3005,
+        port: 8010,
     },
     optimization: {
         splitChunks: {
@@ -40,7 +40,10 @@ module.exports = {
         rules: [
             {
                 test: /\.pug$/,
-                use: ['pug-loader']
+                loaders: 'pug-loader',
+                options: {
+                    pretty: isDev
+                },
             },
             {
                 test: /\.s[ac]ss$/i,

@@ -1,0 +1,68 @@
+$fontSub: OpenSans, Arial, sans-serif;
+
+.form-subscription {
+    width: 605px;
+}
+
+.subscription__subtitle {
+    color: #00bffe;
+    font-family: $fontSub;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 2.4px;
+}
+
+.subscription__title {
+    font-family: $fontSub;
+    color: #eee;
+    font-weight: 600;
+    font-size: 3.2rem;
+    letter-spacing: -0.3px;
+    margin-top: 23px;
+    margin-bottom: 31px;
+}
+
+.subscription__description {
+    font-family: $fontSub;
+    color: #eee;
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+    font-weight: 600;
+    max-width: 75%;
+    line-height: 1.48;
+    margin-bottom: 37px;
+}
+
+.subscription__field {
+    position: relative;
+}
+
+.subscription__email {
+    background: transparent;
+    border: 1px solid #405db1;
+    border-radius: 3em;
+    color: #b1c3ee;
+    font-weight: 500;
+    line-height: 4.4;
+    letter-spacing: -1.1px;
+    padding-left: 2.6em;
+    padding-right: 14em;
+    font-family: $fontSub;
+    width: 308px;
+}
+
+.subscription__btn {
+    text-transform: uppercase;
+    color: #eee;
+    font-family: $fontSub;
+    font-weight: 600;
+    background: #1085e4;
+    border-radius: 3em;
+    border-color: transparent;
+    padding: 15px 45px;
+    position: absolute;
+    top: 12px;
+    right: 40px;
+    letter-spacing: 2.5px;
+}

@@ -1,9 +1,5 @@
 @import '~normalize.css';
 @import '~@/fonts/fonts.scss';
-@import './blocks/button/button_size_m/button_size_m.scss';
-@import './blocks/button/button_color_gray/button_color_gray.scss';
-@import './blocks/button/button_color_transparent/button_color_transparent.scss';
-
 :root {
     box-sizing: border-box;
 }
@@ -14,9 +10,9 @@
     color: #fff;
     border-radius: 3em;
     font-size: 0.5rem;
-    width: 167px;
+    width: 186px;
     border: 0;
-    line-height: 5.3;
+    line-height: 5.8;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2.3px;
@@ -25,4 +21,31 @@
     display: block;
     text-decoration: none;
     text-align: center;
+}
+
+.button_color_gray {
+    background: #cbdbe8;
+    color: #7e8bae;
+    width: 134px;
+    letter-spacing: 2.4px;
+    font-weight: 500;
+}
+
+.button_color_transparent {
+    background: transparent;
+    color: #7e8bae;
+    width: 172px;
+    letter-spacing: 2.2px;
+    font-weight: 500;
+    border: 1.5px solid #dce1e5;
+    line-height: 5.1;
+}
+
+.button_size_m {
+    width: 151px;
+    letter-spacing: 2.35px;
+    font-family: 'MyriadPro';
+    font-weight: 500;
+    line-height: 5.5;
+    font-size: 0.55rem;
 }

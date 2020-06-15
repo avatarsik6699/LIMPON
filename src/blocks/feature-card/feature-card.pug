@@ -1,0 +1,8 @@
+link(href="./feature-card.scss")
+
+mixin feature-card(options)
+    .feature-card
+        img.feature-card__logo(src=require('./blocks/feature-card/images/' + options.imgName || '').default)
+        p.feature-card__title= options.title
+        p.feature-card__description= options.description
+        a.feature-card__link(href="#")= 'Read More'
